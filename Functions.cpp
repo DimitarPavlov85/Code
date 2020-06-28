@@ -10,12 +10,12 @@ void PrintMainMenu() {
 	PrintShortMessage("e. Exit");
 }
 std::string WriteDiseases() {
-	std::string inputdiseases;
+	std::string InputDiseases;
 	std::cin.ignore();
 	std::cin.clear();
 	std::cout << "Please write diseases: ";
-	getline(std::cin, inputdiseases);
-	std::istringstream in(inputdiseases);
+	getline(std::cin, InputDiseases);
+	std::istringstream in(InputDiseases);
 	std::string currentword;
 	std::ostringstream out;
 	while (in >> currentword) {
