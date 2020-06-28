@@ -8,10 +8,10 @@ int main()
 	PrintMainMenu();
 	PrintShortMessage("Please make a choice (1, 2, 3 or e) !!!");
 
-	std::vector<Persons>dataofpersons;
+	std::vector<Persons>DataOfPersons;
 	std::unordered_set<std::string>dataofEGN;
 
-    bool inputdata=true;
+    bool inputdata = true;
 
 	char choice = ' ';
 	std::cin >> choice;
@@ -38,7 +38,7 @@ int main()
 			std::vector<std::string>collectfromdiseases;
 			collectfromdiseases.push_back(diseases);
 			
-			dataofpersons.emplace_back(firstname, lastname,EGN, collectfromdiseases);
+			DataOfPersons.emplace_back(firstname, lastname,EGN, collectfromdiseases);
 			dataofEGN.insert(EGN);
 			inputdata = true;
 			std::cout << std::endl;
@@ -62,9 +62,9 @@ int main()
 				std::string newdiseases;
 				PrintShortMessage("Please write a new data:");
 				std::cin >> newdiseases;
-				for (size_t i = 0; i < dataofpersons.size(); ++i) {
-					if (dataofpersons[i].GetEGN() == inputEGN) {
-						dataofpersons[i].Setdiseases(newdiseases);
+				for (size_t i = 0; i < DataOfPersons.size(); ++i) {
+					if (DataOfPersons[i].GetEGN() == inputEGN) {
+						DataOfPersons[i].Setdiseases(newdiseases);
 					}
 				}
 				inputdata = true;
@@ -74,7 +74,7 @@ int main()
 			
 		}
 		else if (choice == '3') {
-			print(dataofpersons);
+			print(DataOfPersons);
 			inputdata = true;
 			PrintMainMenu();
 			std::cin >> choice;
