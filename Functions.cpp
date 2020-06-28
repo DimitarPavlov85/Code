@@ -1,13 +1,13 @@
 #include"Functions.h"
-void printshortmessage(const std::string& message){
+void PrintShortMessage(const std::string& message){
 	std::cout << message << std::endl;
 }
 void PrintMainMenu() {
-	printshortmessage("----Menu----");
-	printshortmessage("1.Add Person");
-	printshortmessage("2.Add data in person");
-	printshortmessage("3.Print data");
-	printshortmessage("e. Exit");
+	PrintShortMessage("----Menu----");
+	PrintShortMessage("1.Add Person");
+	PrintShortMessage("2.Add data in person");
+	PrintShortMessage("3.Print data");
+	PrintShortMessage("e. Exit");
 }
 std::string Writediseases() {
 	std::string inputdiseases;
@@ -31,7 +31,7 @@ std::string checkforegn(const std::unordered_set<std::string>& _dataofEGN) {
 		return inputEGN;
 	}
 	else {
-		 printshortmessage("Person with this EGN doesn't exist!!!");
+		 PrintShortMessage("Person with this EGN doesn't exist!!!");
 		 return inputEGN = "false";
 	}
 

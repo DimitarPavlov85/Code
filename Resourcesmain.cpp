@@ -4,9 +4,9 @@
 
 int main()
 {
-	printshortmessage("Hello this is a small project to manage people with disadvantaged health situation!!!");
+	PrintShortMessage("Hello this is a small project to manage people with disadvantaged health situation!!!");
 	PrintMainMenu();
-	printshortmessage("Please make a choice (1, 2, 3 or e) !!!");
+	PrintShortMessage("Please make a choice (1, 2, 3 or e) !!!");
 
 	std::vector<Persons>dataofpersons;
 	std::unordered_set<std::string>dataofEGN;
@@ -21,15 +21,15 @@ int main()
 			choice = tolower(choice);
 		}
 		if (choice == '1') {
-			printshortmessage("Plase write first name: ");
+			PrintShortMessage("Plase write first name: ");
 
 			std::string firstname;
 			std::cin >> firstname;
-			printshortmessage("Plase write last name: ");
+			PrintShortMessage("Plase write last name: ");
 
 			std::string lastname;
 			std::cin >> lastname;
-			printshortmessage("Plase write EGN: ");
+			PrintShortMessage("Plase write EGN: ");
 
 			std::string EGN;
 			std::cin >> EGN;
@@ -43,7 +43,7 @@ int main()
 			inputdata = true;
 			std::cout << std::endl;
 
-			printshortmessage("Please make a choice (1, 2, 3 or e) !!!");
+			PrintShortMessage("Please make a choice (1, 2, 3 or e) !!!");
 			PrintMainMenu();
 			std::cin >> choice;
 		}
@@ -60,7 +60,7 @@ int main()
 			}
 			else {
 				std::string newdiseases;
-				printshortmessage("Please write a new data:");
+				PrintShortMessage("Please write a new data:");
 				std::cin >> newdiseases;
 				for (size_t i = 0; i < dataofpersons.size(); ++i) {
 					if (dataofpersons[i].GetEGN() == inputEGN) {
@@ -84,7 +84,7 @@ int main()
 			inputdata = false;
 		}
 		else {
-			printshortmessage("Wrong input Please try again: ");
+			PrintShortMessage("Wrong input Please try again: ");
 			std::cin >> choice;
 			inputdata = true;
 		}

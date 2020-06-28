@@ -7,7 +7,7 @@
 #include"Persons.h"
 #include<unordered_set>
 
-void printshortmessage(const std::string & message);
+void PrintShortMessage(const std::string & message);
 
 void PrintMainMenu();
 
