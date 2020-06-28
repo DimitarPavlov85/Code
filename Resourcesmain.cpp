@@ -13,14 +13,14 @@ int main()
 
     bool IsRun = true;
 
-	char choise = ' ';
-	std::cin >> choise;
+	char Choise = ' ';
+	std::cin >> Choise;
 
 	while (IsRun) {
 		
-			choise = tolower(choise);
+			Choise = tolower(Choise);
 		
-		if (choise == '1') {
+		if (Choise == '1') {
 			PrintShortMessage("Plase write first name: ");
 
 			std::string firstname;
@@ -45,18 +45,19 @@ int main()
 
 			PrintShortMessage("Please make a choice (1, 2, 3 or e) !!!");
 			PrintMainMenu();
-			std::cin >> choise;
+			std::cin >> Choise;
 		}
-		else if (choise == '2') {
+		else if (Choise == '2') {
 			
 			std::cout << "If you want to add new diseases in person please write correct EGN: " << std::endl;
 
-			std::string inputEGN=checkforegn(DataOfEGN);
-			if (inputEGN == "false") {
+			std::string inputEGN=EGNExist(DataOfEGN);
+
+			if (inputEGN == "") {
               IsRun = true;
 
 			  PrintMainMenu();
-			  std::cin >> choise;
+			  std::cin >> Choise;
 			}
 			else {
 				std::string newdiseases;
@@ -69,23 +70,23 @@ int main()
 				}
 				IsRun = true;
 				PrintMainMenu();
-				std::cin >> choise;
+				std::cin >> Choise;
 			}
 			
 		}
-		else if (choise == '3') {
+		else if (Choise == '3') {
 			print(DataOfPersons);
 			IsRun = true;
 			PrintMainMenu();
-			std::cin >> choise;
+			std::cin >> Choise;
 		}
-		else if (choise == 'e') {
+		else if (Choise == 'e') {
 			std::cout << "Close the program" << std::endl;
 			IsRun = false;
 		}
 		else {
 			PrintShortMessage("Wrong input Please try again: ");
-			std::cin >> choise;
+			std::cin >> Choise;
 			IsRun = true;
 		}
 	}

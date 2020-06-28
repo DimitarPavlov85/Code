@@ -1,5 +1,8 @@
 ﻿  Functions.cpp
   Persons.cpp
+E:\Mitko\SmallProject\localfolder\Functions.h(18,34): error C2065: 'Persons': undeclared identifier
+E:\Mitko\SmallProject\localfolder\Functions.h(18,27): error C2923: 'std::vector': 'Persons' is not a valid template type argument for parameter '_Ty'
+E:\Mitko\SmallProject\localfolder\Functions.h(18,27): error C2976: 'std::vector': too few template arguments
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.26.28801\include\vector(412): message : see declaration of 'std::vector'
   Resourcesmain.cpp
   Generating Code...
-  Resources.vcxproj -> E:\Mitko\SmallProject\localfolder\x64\Debug\Resources.exe

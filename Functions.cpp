@@ -23,7 +23,7 @@ std::string WriteDiseases() {
 	}
 	return out.str();
 }
-std::string checkforegn(const std::unordered_set<std::string>& _dataofEGN) {
+std::string EGNExist(const std::unordered_set<std::string>& _dataofEGN) {
 	std::string inputEGN;
 	std::cin >> inputEGN;
 
@@ -32,8 +32,7 @@ std::string checkforegn(const std::unordered_set<std::string>& _dataofEGN) {
 	}
 	else {
 		 PrintShortMessage("Person with this EGN doesn't exist!!!");
-		 return inputEGN = "false";
+		 return inputEGN = "";
 	}
-
-	
 }
+

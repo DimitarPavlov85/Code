@@ -13,7 +13,9 @@ void PrintMainMenu();
 
 std::string WriteDiseases();
 
-std::string checkforegn( const std::unordered_set<std::string>& _dataofEGN);
+std::string EGNExist( const std::unordered_set<std::string>& _dataofEGN);
+
+
 
 template<typename T>
 void print(const T& current) {
