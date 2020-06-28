@@ -11,12 +11,12 @@ int main()
 	std::vector<Persons>DataOfPersons;
 	std::unordered_set<std::string>DataOfEGN;
 
-    bool inputdata = true;
+    bool IsRun = true;
 
 	char choise = ' ';
 	std::cin >> choise;
 
-	while (inputdata) {
+	while (IsRun) {
 		
 			choise = tolower(choise);
 		
@@ -40,7 +40,7 @@ int main()
 			
 			DataOfPersons.emplace_back(firstname, lastname,EGN, collectfromdiseases);
 			DataOfEGN.insert(EGN);
-			inputdata = true;
+			IsRun = true;
 			std::cout << std::endl;
 
 			PrintShortMessage("Please make a choice (1, 2, 3 or e) !!!");
@@ -53,7 +53,7 @@ int main()
 
 			std::string inputEGN=checkforegn(DataOfEGN);
 			if (inputEGN == "false") {
-              inputdata = true;
+              IsRun = true;
 
 			  PrintMainMenu();
 			  std::cin >> choise;
@@ -67,7 +67,7 @@ int main()
 						DataOfPersons[i].Setdiseases(newdiseases);
 					}
 				}
-				inputdata = true;
+				IsRun = true;
 				PrintMainMenu();
 				std::cin >> choise;
 			}
@@ -75,18 +75,18 @@ int main()
 		}
 		else if (choise == '3') {
 			print(DataOfPersons);
-			inputdata = true;
+			IsRun = true;
 			PrintMainMenu();
 			std::cin >> choise;
 		}
 		else if (choise == 'e') {
 			std::cout << "Close the program" << std::endl;
-			inputdata = false;
+			IsRun = false;
 		}
 		else {
 			PrintShortMessage("Wrong input Please try again: ");
 			std::cin >> choise;
-			inputdata = true;
+			IsRun = true;
 		}
 	}
 
