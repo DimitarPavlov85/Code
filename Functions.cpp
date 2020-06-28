@@ -9,7 +9,7 @@ void PrintMainMenu() {
 	PrintShortMessage("3.Print data");
 	PrintShortMessage("e. Exit");
 }
-std::string Writediseases() {
+std::string WriteDiseases() {
 	std::string inputdiseases;
 	std::cin.ignore();
 	std::cin.clear();
