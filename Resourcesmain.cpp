@@ -9,7 +9,7 @@ int main()
 	PrintShortMessage("Please make a choice (1, 2, 3 or e) !!!");
 
 	std::vector<Persons>DataOfPersons;
-	std::unordered_set<std::string>dataofEGN;
+	std::unordered_set<std::string>DataOfEGN;
 
     bool inputdata = true;
 
@@ -39,7 +39,7 @@ int main()
 			collectfromdiseases.push_back(diseases);
 			
 			DataOfPersons.emplace_back(firstname, lastname,EGN, collectfromdiseases);
-			dataofEGN.insert(EGN);
+			DataOfEGN.insert(EGN);
 			inputdata = true;
 			std::cout << std::endl;
 
@@ -51,7 +51,7 @@ int main()
 			
 			std::cout << "If you want to add new diseases in person please write correct EGN: " << std::endl;
 
-			std::string inputEGN=checkforegn(dataofEGN);
+			std::string inputEGN=checkforegn(DataOfEGN);
 			if (inputEGN == "false") {
               inputdata = true;
 
