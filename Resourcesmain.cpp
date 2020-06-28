@@ -60,12 +60,12 @@ int main()
 			  std::cin >> Choise;
 			}
 			else {
-				std::string newdiseases;
+				std::string NewDiseases;
 				PrintShortMessage("Please write a new data:");
-				std::cin >> newdiseases;
+				std::cin >> NewDiseases;
 				for (size_t i = 0; i < DataOfPersons.size(); ++i) {
 					if (DataOfPersons[i].GetEGN() == inputEGN) {
-						DataOfPersons[i].Setdiseases(newdiseases);
+						DataOfPersons[i].Setdiseases(NewDiseases);
 					}
 				}
 				IsRun = true;
