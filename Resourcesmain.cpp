@@ -11,25 +11,25 @@ int main()
 	std::vector<Persons>DataOfPersons;
 	std::unordered_set<std::string>DataOfEGN;
 
-    bool IsRun = true;
+	bool IsRun = true;
 
 	char Choise = ' ';
 	std::cin >> Choise;
 
 	while (IsRun) {
-		
-			Choise = tolower(Choise);
-		
+
+		Choise = tolower(Choise);
+
 		if (Choise == '1') {
-			PrintShortMessage("Plase write first name: ");
+			PrintShortMessage("Please write first name: ");
 
 			std::string firstname;
 			std::cin >> firstname;
-			PrintShortMessage("Plase write last name: ");
+			PrintShortMessage("Please write last name: ");
 
 			std::string lastname;
 			std::cin >> lastname;
-			PrintShortMessage("Plase write EGN: ");
+			PrintShortMessage("Please write EGN: ");
 
 			std::string EGN;
 			std::cin >> EGN;
@@ -37,8 +37,8 @@ int main()
 
 			std::vector<std::string>collectfromdiseases;
 			collectfromdiseases.push_back(diseases);
-			
-			DataOfPersons.emplace_back(firstname, lastname,EGN, collectfromdiseases);
+
+			DataOfPersons.emplace_back(firstname, lastname, EGN, collectfromdiseases);
 			DataOfEGN.insert(EGN);
 			IsRun = true;
 			std::cout << std::endl;
@@ -48,16 +48,16 @@ int main()
 			std::cin >> Choise;
 		}
 		else if (Choise == '2') {
-			
+
 			std::cout << "If you want to add new diseases in person please write correct EGN: " << std::endl;
 
-			std::string inputEGN=EGNExist(DataOfEGN);
+			std::string inputEGN = EGNExist(DataOfEGN);
 
 			if (inputEGN == "") {
-              IsRun = true;
+				IsRun = true;
 
-			  PrintMainMenu();
-			  std::cin >> Choise;
+				PrintMainMenu();
+				std::cin >> Choise;
 			}
 			else {
 				std::string NewDiseases;
@@ -72,7 +72,7 @@ int main()
 				PrintMainMenu();
 				std::cin >> Choise;
 			}
-			
+
 		}
 		else if (Choise == '3') {
 			print(DataOfPersons);
