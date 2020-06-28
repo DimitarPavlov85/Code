@@ -24,15 +24,15 @@ std::string WriteDiseases() {
 	return out.str();
 }
 std::string EGNExist(const std::unordered_set<std::string>& _dataofEGN) {
-	std::string inputEGN;
-	std::cin >> inputEGN;
+	std::string InputEGN;
+	std::cin >> InputEGN;
 
-	if (_dataofEGN.find(inputEGN) != _dataofEGN.end()) {
-		return inputEGN;
+	if (_dataofEGN.find(InputEGN) != _dataofEGN.end()) {
+		return InputEGN;
 	}
 	else {
 		 PrintShortMessage("Person with this EGN doesn't exist!!!");
-		 return inputEGN = "";
+		 return InputEGN = "";
 	}
 }
 
