@@ -33,7 +33,7 @@ int main()
 
 			std::string EGN;
 			std::cin >> EGN;
-			std::string diseases = Writediseases();
+			std::string diseases = WriteDiseases();
 
 			std::vector<std::string>collectfromdiseases;
 			collectfromdiseases.push_back(diseases);

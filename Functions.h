@@ -11,7 +11,7 @@ void PrintShortMessage(const std::string & message);
 
 void PrintMainMenu();
 
-std::string Writediseases();
+std::string WriteDiseases();
 
 std::string checkforegn( const std::unordered_set<std::string>& _dataofEGN);
 
