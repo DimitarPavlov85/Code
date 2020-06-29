@@ -13,9 +13,12 @@ void PrintMainMenu();
 
 std::string WriteDiseases();
 
-std::string EGNExist( const std::unordered_set<std::string>& _dataofEGN);
+std::string IsEGNExist( const std::unordered_set<std::string>& _dataofEGN);
 
+void CreateProfil(std::string & _firstName, std::string &_LastName, 
+	              std::string &_EGN, std::vector<std::string> &_CollectFromDiseases);
 
+std::string AddNewData(std::string &NewData);
 
 template<typename T>
 void print(const T& current) {

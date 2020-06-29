@@ -23,7 +23,20 @@ std::string WriteDiseases() {
 	}
 	return out.str();
 }
-std::string EGNExist(const std::unordered_set<std::string>& _dataofEGN) {
+void CreateProfil(std::string& _firstName, std::string& _LastName,
+	std::string& _EGN, std::vector<std::string>& _CollectFromDiseases) {
+	PrintShortMessage("Please write first name: ");
+	std::cin >> _firstName;
+	PrintShortMessage("Please write last name: ");
+	std::cin >> _LastName;
+	PrintShortMessage("Please write EGN: ");
+	std::cin >> _EGN;
+	std::string diseases = WriteDiseases();
+	_CollectFromDiseases.push_back(diseases);
+}
+
+
+std::string IsEGNExist(const std::unordered_set<std::string>& _dataofEGN) {
 	std::string InputEGN;
 	std::cin >> InputEGN;
 
@@ -35,4 +48,13 @@ std::string EGNExist(const std::unordered_set<std::string>& _dataofEGN) {
 		 return InputEGN = "";
 	}
 }
+ 
+	
+std::string AddNewData(std::string &NewDiseases) {
+	
+	PrintShortMessage("Please write a new data:");
+	std::cin >> NewDiseases;
+	return NewDiseases;
+}
+
 
