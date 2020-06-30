@@ -1,7 +1,7 @@
 #include "Persons.h"
 #include"Functions.h"
 
-Persons::Persons(std::string _firstname, std::string _lastname,std::string _EGN, std::vector<std::string>_diseases)
+Persons::Persons(std::string _firstname, std::string _lastname,const std::string _EGN, std::vector<std::string>_diseases)
 	:firstname(_firstname),lastname(_lastname),EGN(_EGN),diseases(_diseases)
 {
 	PrintShortMessage("Your data is saved!!! \n ");
