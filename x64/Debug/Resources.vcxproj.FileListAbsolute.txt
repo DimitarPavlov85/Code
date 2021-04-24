@@ -1,2 +1,0 @@
-E:\Mitko\SmallProject\localfolder\x64\Debug\Resources.exe
-E:\Mitko\SmallProject\localfolder\x64\Debug\Resources.pdb
